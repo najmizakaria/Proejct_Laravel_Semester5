@@ -1,0 +1,123 @@
+/* Basic styles for the bookstore lab. */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #222;
+    background-color: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.site-header {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links form {
+    margin: 0;
+}
+
+a {
+    color: #0645ad;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+
+.site-footer {
+    border-top: 1px solid #aaa;
+    padding-top: 15px;
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+.button, button {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #888;
+    background-color: #eee;
+    color: #222;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover, button:hover { background-color: #ddd; }
+
+.page-heading, .section-heading { margin-bottom: 20px; }
+.table-wrap { overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: left;
+}
+
+th { background-color: #eee; }
+.alternate { background-color: #f7f7f7; }
+.table-author { display: block; font-size: 14px; margin-top: 5px; }
+.featured { font-size: 12px; color: #555; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.actions form { margin: 0; }
+
+.form-panel { max-width: 550px; }
+.field { margin-bottom: 15px; }
+.field label { display: block; margin-bottom: 5px; }
+
+input:not([type=checkbox]):not([type=hidden]), select, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #888;
+    font: inherit;
+}
+
+textarea { resize: vertical; }
+small { display: block; margin-top: 5px; }
+.checkbox-label { display: flex !important; gap: 8px; align-items: center; }
+.form-actions { display: flex; gap: 10px; margin-top: 20px; }
+.auth-alternative { margin-top: 20px; }
+.alert { border: 1px solid #aaa; padding: 10px; margin: 15px 0; }
+.success { color: #175b20; background-color: #f0fff0; }
+.error, .field-error, .danger { color: #a00000; }
+.field-error { margin-top: 5px; font-size: 14px; }
+[aria-invalid=true] { border-color: #a00000 !important; }
+.book-facts div { margin-bottom: 12px; }
+dt { font-weight: bold; }
+dd { margin: 5px 0 0; overflow-wrap: anywhere; }
+.description { white-space: pre-line; }
+.back-link { display: inline-block; margin-bottom: 10px; }
+.muted, .form-note { color: #555; }
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { position: static; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+
+@media (max-width: 600px) {
+    body { margin: 12px; }
+    th, td { padding: 7px; }
+}
