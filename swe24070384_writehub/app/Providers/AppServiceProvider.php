@@ -1,4 +1,8 @@
 <?php
+/**
+ * Student Name : Muhammad Najmi Bin Zakaria
+ * Student ID   : SWE24070384
+ */
 
 namespace App\Providers;
 
@@ -7,6 +11,8 @@ use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
+use App\Models\User;
+use Illuminate\Support\Facades\gate;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+
+        Gate::define('publish-article', fn (User $user): bool => $user->isAdmin());
     }
 
     /**
