@@ -5,6 +5,7 @@
  */
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,3 +13,4 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('books', BookController::class);
+Route::resource('categories', CategoryController::class)->only(['index', 'show']);
